@@ -1,8 +1,8 @@
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PIIPseudonymizer {
 
@@ -51,7 +51,7 @@ public class PIIPseudonymizer {
     }
 
     public static void main(String[] args) {
-        String text = "John Doe's email is johndoe@example.com and his phone number is 123-456-7890. " +
+        String text = "Bull Dog email is bulldog@example.com and his phone number is 123-456-7890. " +
                       "His SSN is 123-45-6789.";
         String pseudonymizedText = pseudonymizeText(text);
         System.out.println("Original text: " + text);
