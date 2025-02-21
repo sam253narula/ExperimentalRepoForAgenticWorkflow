@@ -51,7 +51,7 @@ public class PIIPseudonymizer {
     }
 
     public static void main(String[] args) {
-        String text = "samarth narula email is samarth@example.com and his phone number is 123-456-7890. " +
+        String text = "samarth email is samarth@example.com and his phone number is 123-456-7890. " +
                       "His SSN is 123-45-6789.";
         String pseudonymizedText = pseudonymizeText(text);
         System.out.println("Original text: " + text);
