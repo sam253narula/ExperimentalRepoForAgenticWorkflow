@@ -16,9 +16,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Determine Model
+      id: determine_model
+      run: |
+        echo "model=sonar" >> $GITHUB_OUTPUT
+      shell: bash  
+
     - name: AI PR Review
       uses: sam253narula/ai-pr-reviewer@v2.0.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         perplexity_api_key: ${{ secrets.PERPLEXITY_API_KEY }}
-        model: sonar
+        model: ${{ steps.determine_model.outputs.model }}
