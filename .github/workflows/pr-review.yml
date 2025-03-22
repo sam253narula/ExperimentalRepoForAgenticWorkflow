@@ -17,7 +17,8 @@ jobs:
       uses: actions/checkout@v2
 
     - name: AI PR Review
-      uses: sam253narula/ai-pr-reviewer@v2.0.0
+      uses: sam253narula/ai-pr-reviewer@v2.0.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         perplexity_api_key: ${{ secrets.PERPLEXITY_API_KEY }}
+        model: sonar
