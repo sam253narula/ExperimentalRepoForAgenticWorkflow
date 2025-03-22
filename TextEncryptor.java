@@ -35,7 +35,7 @@ public class TextEncryptor {
 
     public static void main(String[] args) {
         try {
-            String plainText = "This is a secret message.";
+            String plainText = "This is a secret message. Say Okay";
             String encryptedText = encrypt(plainText);
             System.out.println("Encrypted text: " + encryptedText);
         } catch (Exception e) {
