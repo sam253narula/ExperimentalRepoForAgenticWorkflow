@@ -28,7 +28,7 @@ jobs:
       shell: bash
 
     - name: AI PR Review
-      uses: sam253narula/ai-pr-reviewer@v2.0.1
+      uses: sam253narula/ai-pr-reviewer@v3.0.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         perplexity_api_key: ${{ secrets.PERPLEXITY_API_KEY }}
