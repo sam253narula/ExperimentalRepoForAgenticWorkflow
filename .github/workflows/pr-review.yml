@@ -19,8 +19,13 @@ jobs:
     - name: Determine Model
       id: determine_model
       run: |
-        echo "::set-output name=model::sonar"
+        echo "model=sonar" >> $GITHUB_OUTPUT
       shell: bash  
+
+    - name: Print Model Output
+      run: |
+        echo "Model output: ${{ steps.determine_model.outputs.model }}"
+      shell: bash
 
     - name: AI PR Review
       uses: sam253narula/ai-pr-reviewer@v2.0.1
